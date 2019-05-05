@@ -122,12 +122,52 @@
         <item> "Other"</item>
     </string-array>
 
+    <string-array name="spinner_Discontinuities_str">
+        <item> "Unacceptable surface were NOT detected in the teste area"</item>
+        <item> "Unacceptable surface WERE detected in the teste area"</item>
+    </string-array>
+
+    <string-array name="spinner_PostCleaning_str">
+        <item> "Water"</item>
+        <item> "Solvent washed and dried"</item>
+        <item> "Wiped"</item>
+    </string-array>
+
+    <string-array name="spinner_TestResults_str">
+        <item> "The test items (area) complied with the specification requirements"</item>
+        <item> "The test items (area) did not comply with the specification requirements"</item>
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_Header">Inspection Report - Caride</string>
-    <string name="txt_input_TestDetails" />
     <string name="txt_input_TestRestrictions" />
     <string name="rad_Removal_1">Method A - Water Wash</string>
     <string name="rad_Removal_2">Method C - Solvent</string>
+    <string name="txt_Discontinuities">Discontinuities:</string>
+    <string name="txt_PostCleaning">Post Cleaning</string>
+    <string name="txt_TestResults">Test Results:</string>
+    <string name="TestDetails">Test Details:</string>
+    <string name="rad_PostCleaning_1">Yes</string>
+    <string name="rad_PostCleaning_2">No</string>
+    <string name="txt_TestDetails">Test Details</string>
+    <string name="txt_Personnel" >Personnel:</string>
+    <string name="txt_input_txt_Personnel" />
+    <string name="txt_input_TestDetails" />
+    <string name="txt_JobDetail">Job Detail</string>
+    <string name="txt_TravelStart">Start:</string>
+    <string name="txt_TravelFinished">Finished:</string>
+    <string name="txt_input_TravelFinished" />
+    <string name="txt_input_TravelStart" />
+    <string name="txt_JobStart">Start:</string>
+    <string name="txt_input_JobStart" />
+    <string name="txt_TravelDetail">Travel Detail</string>
+    <string name="JobFinished">Finished:</string>
+    <string name="txt_input_JobFinished" />
+    <string name="Extras">Extras</string>
+    <string name="txt_Extras_Consumables">Consumables:</string>
+    <string name="txt_input_Extras_Consumables" />
+    <string name="txt_Extras_Delay_Repair">Delays/Repair:</string>
+    <string name="txt_input_Extras_Delay_Repair" />
 </resources>

@@ -108,11 +108,13 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/txt_input_InspectorName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
                     android:text="@string/txt_input_InspectorName" />
 
             </LinearLayout>
@@ -464,6 +466,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_TestEquipment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
@@ -975,32 +978,395 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_TestDetails"
+                android:id="@+id/layout_Discontinuities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_Discontinuities"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_Discontinuities"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spn_Discontinuities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_PostCleaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_PostCleaning"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_PostCleaning"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation='vertical'>
+
+                    <RadioButton
+                        android:id="@+id/rad_PostCleaning_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rad_PostCleaning_1" />
+
+                    <RadioButton
+                        android:id="@+id/rad_PostCleaning_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rad_PostCleaning_2" />
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/spn_PostCleaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_TestResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_TestResults"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TestResults"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spn_TestResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_title_TestDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_TestDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TestDetails"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_TestDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txt_input_TestDetails"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:lines="4"
+                        android:maxLines="5"
+                        android:singleLine="false"
+                        android:text="@string/txt_input_TestDetails"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Personnel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txt_TestDetails"
+                    android:id="@+id/txt_Personnel"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:text="@string/txt_InspectorName"
+                    android:text="@string/txt_Personnel"
                     android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_TestDetails"
-                    android:layout_width="160dp"
+                    android:id="@+id/txt_input_txt_Personnel"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:text="@string/txt_input_TestDetails"
+                    android:inputType="textPersonName"
+                    android:text="@string/txt_input_txt_Personnel" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_TravelDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_TravelDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TravelDetail"
                     android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Travel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_TravelStart"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TravelStart"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_input_TravelStart"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/txt_input_TravelStart"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_TravelFinished"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TravelFinished"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_input_TravelFinished"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/txt_input_TravelFinished"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_JobDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_JobDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_JobDetail"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Job"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_JobStart"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_JobStart"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_input_JobStart"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/txt_input_JobStart"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_JobFinished"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/JobFinished"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_input_JobFinished"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/txt_input_JobFinished"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Extras"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_Extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/Extras"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Extras_Consumables"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_Extras_Consumables"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/txt_Extras_Consumables"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_input_Extras_Consumables"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="@string/txt_input_Extras_Consumables"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_Extras_Delay_Repair"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/txt_Extras_Delay_Repair"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_input_Extras_Delay_Repair"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="@string/txt_input_Extras_Delay_Repair"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 

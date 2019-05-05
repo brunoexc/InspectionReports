@@ -7,7 +7,9 @@ import android.widget.Spinner;
 
 public class PenetrantReportActivity extends AppCompatActivity {
 
-    Spinner spinner_PenetrantType, spinner_DeveloperType, spinner_SurfaceCondition, spinner_Preparation, spinner_TestArea, spinner_ClientTemp;
+    Spinner spinner_PenetrantType, spinner_DeveloperType, spinner_SurfaceCondition, spinner_Preparation,
+            spinner_TestArea, spinner_ClientTemp, spinner_Discontinuities, spinner_PostCleaning,spinner_TestResults;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,17 @@ public class PenetrantReportActivity extends AppCompatActivity {
         ArrayAdapter adapter6 = ArrayAdapter.createFromResource(this, R.array.spinner_ClientTemp_str, android.R.layout.simple_spinner_item);
         spinner_ClientTemp.setAdapter(adapter6);
 
+        spinner_Discontinuities = (Spinner) findViewById(R.id.spn_Discontinuities);
+        ArrayAdapter adapter7 = ArrayAdapter.createFromResource(this, R.array.spinner_Discontinuities_str, android.R.layout.simple_spinner_item);
+        spinner_Discontinuities.setAdapter(adapter7);
 
+        spinner_PostCleaning = (Spinner) findViewById(R.id.spn_PostCleaning);
+        ArrayAdapter adapter8 = ArrayAdapter.createFromResource(this, R.array.spinner_PostCleaning_str, android.R.layout.simple_spinner_item);
+        spinner_PostCleaning.setAdapter(adapter8);
 
+        spinner_TestResults = (Spinner) findViewById(R.id.spn_TestResults);
+        ArrayAdapter adapter9 = ArrayAdapter.createFromResource(this, R.array.spinner_TestResults_str, android.R.layout.simple_spinner_item);
+        spinner_TestResults.setAdapter(adapter9);
 
     }
 
