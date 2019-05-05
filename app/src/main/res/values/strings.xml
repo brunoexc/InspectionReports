@@ -55,4 +55,79 @@
     <string name="txt_SurfaceCondition">Surface Condition:</string>
     <string name="txt_Preparation"><![CDATA[& Preparation:]]></string>
     <string name="txt_TestArea">Test Area:</string>
+    <string name="txt_TestRestrictions">Test Restrictions</string>
+    <string name="txt_input_InspectorName" />
+    <string name="txt_input_ReportNumber" />
+    <string name="txt_input_PurchaseOrderNo" />
+    <string name="txt_input_ClientLocation" />
+    <string name="txt_input_TestSpecification" />
+    <string name="txt_input_MaterialGrade" />
+    <string name="txt_input_TestMethod" />
+    <string name="txt_input_TestProcedure" />
+    <string name="txt_input_DwellTimePenetrant" />
+    <string name="txt_input_DwellTimeDeveloper" />
+    <string name="txt_input_Blacklight" />
+    <string name="txt_input_Blacklight_SN" />
+    <string name="txt_input_DryerOven" />
+    <string name="txt_input_DryerOven_SN" />
+    <string name="txt_input_Consumables_PreCleaner" />
+    <string name="txt_input_Consumables_PreCleaner_Batch" />
+    <string name="txt_input_Consumables_Penetrant" />
+    <string name="txt_input_Consumables_Penetrant_Batch" />
+    <string name="txt_input_Consumables_Remover" />
+    <string name="txt_input_Consumables_Remover_Batch" />
+    <string name="txt_input_Consumables_Developer" />
+    <string name="txt_input_Consumables_Developer_Batch" />
+
+    <string-array name="spinner_ClientTemp_str">
+        <item> "André Caride Dutra"</item>
+        <item> "Bruno Caride Dutra"</item>
+    </string-array>
+
+    <string-array name="spinner_PenetrantType_str">
+        <item> "Type 1 (Fluorescent)"</item>
+        <item> "Type 2 (Colour contrast)"</item>
+    </string-array>
+
+    <string-array name="spinner_DeveloperType_str">
+        <item> "Form A - Dry powder"</item>
+        <item> "Type D - Solvent based"</item>
+    </string-array>
+
+    <string-array name="spinner_SurfaceCondition_str">
+        <item> "As welded"</item>
+        <item> "As cast"</item>
+        <item> "As rolled"</item>
+        <item> "As forged"</item>
+        <item> "Repaired"</item>
+        <item> "Wire brushed"</item>
+        <item> "Machined"</item>
+        <item> "Ground"</item>
+    </string-array>
+
+    <string-array name="spinner_Preparation_str">
+        <item> "Water"</item>
+        <item> "Solvent flooded"</item>
+        <item> "Sprayed"</item>
+        <item> "Dipped"</item>
+        <item> "Washed and Dired"</item>
+        <item> "Wiped"</item>
+    </string-array>
+
+    <string-array name="spinner_TestArea_str">
+        <item> "100% Weld and associated HAZ"</item>
+        <item> "100% accessible surface of item"</item>
+        <item> "Strakes"</item>
+        <item> "Spot"</item>
+        <item> "Other"</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_Header">Inspection Report - Caride</string>
+    <string name="txt_input_TestDetails" />
+    <string name="txt_input_TestRestrictions" />
+    <string name="rad_Removal_1">Method A - Water Wash</string>
+    <string name="rad_Removal_2">Method C - Solvent</string>
 </resources>

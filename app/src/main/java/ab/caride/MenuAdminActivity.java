@@ -14,12 +14,12 @@ public class MenuAdminActivity extends AppCompatActivity {
     }
 
 
-    public void OnClickbuttonCadastrarCliente (View view){
+    public void OnClickbuttonMenuReports (View view){
 
-        Intent call_activity_report_menu = new Intent(this, MenuReportsActivity.class);
-        startActivity(call_activity_report_menu);
+        Intent call_activity_menu_reports = new Intent(this, MenuReportsActivity.class);
+        startActivity(call_activity_menu_reports);
+
     }
-
 
 
 }

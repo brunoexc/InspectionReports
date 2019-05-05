@@ -7,6 +7,21 @@
     tools:context=".PenetrantReportActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="ab.caride.ProgramHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,23 +29,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <fragment
-            android:id="@+id/frag_Header"
-            android:name="com.example.sales_force.SalesForceHeader"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_weight="1" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/txt_title_ReportPT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="5dp"
         android:layout_weight="1"
         android:text="@string/txt_title_ReportPT"
@@ -45,11 +51,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_title_ReportPT">
 
@@ -75,15 +83,11 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/txt_input_ClientName"
+                <Spinner
+                    android:id="@+id/spn_ClientName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Nome do Cliente"
-                    android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
-                    android:textSize="16sp" />
+                    android:layout_weight="0" />
 
             </LinearLayout>
 
@@ -104,17 +108,12 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/txt_input_ClientEmail"
-                    android:layout_width="160dp"
+                <TextView
+                    android:id="@+id/txt_input_InspectorName"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="emailclient@ucl.br"
-                    android:inputType="textEmailAddress"
-                    android:text="@string/txt_input_ClientEmail"
-                    android:textAlignment="viewStart"
-                    android:textSize="16sp" />
+                    android:layout_weight="0"
+                    android:text="@string/txt_input_InspectorName" />
 
             </LinearLayout>
 
@@ -135,14 +134,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientPhone"
+                    android:id="@+id/txt_input_ReportNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="(27) 99999-9999"
                     android:inputType="phone"
-                    android:text="@string/txt_input_ClientPhone"
+                    android:text="@string/txt_input_ReportNumber"
                     android:textAlignment="viewStart"
                     android:textSize="16sp" />
 
@@ -158,13 +156,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_PurchaseOrderNo"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_PurchaseOrderNo"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -187,13 +184,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_ClientLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_ClientLocation"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -216,13 +212,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_TestSpecification"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_TestSpecification"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -246,13 +241,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_MaterialGrade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_MaterialGrade"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -276,13 +270,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_TestMethod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_TestMethod"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -306,13 +299,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_TestProcedure"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_TestProcedure"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -363,13 +355,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_DwellTimePenetrant"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_DwellTimePenetrant"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -420,13 +411,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_DwellTimeDeveloper"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_DwellTimeDeveloper"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -457,18 +447,18 @@
                     android:orientation='vertical'>
 
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/rad_Removal_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="RadioButton" />
+                        android:text="@string/rad_Removal_1" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/rad_Removal_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="RadioButton" />
+                        android:text="@string/rad_Removal_2" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -481,7 +471,7 @@
 
                 <TextView
                     android:id="@+id/txt_TestEquipment"
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="@string/txt_TestEquipment"
@@ -510,13 +500,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName"
+                    android:id="@+id/txt_input_Blacklight"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Blacklight"
                     android:textSize="16sp" />
 
                 <TextView
@@ -531,14 +520,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName3"
+                    android:id="@+id/txt_input_Blacklight_SN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Blacklight_SN"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -562,14 +550,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_DryerOven"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_DryerOven"
                     android:textSize="16sp" />
 
                 <TextView
@@ -584,19 +571,19 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_DryerOven_SN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_DryerOven_SN"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Consumables"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
@@ -604,7 +591,7 @@
 
                 <TextView
                     android:id="@+id/txt_Consumables"
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="@string/txt_Consumables"
@@ -615,6 +602,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Consumables_PreCleaner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -632,14 +620,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_PreCleaner"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_PreCleaner"
                     android:textSize="16sp" />
 
                 <TextView
@@ -654,19 +641,19 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_PreCleaner_Batch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_PreCleaner_Batch"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Consumables_Penetrant"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -684,14 +671,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Penetrant"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Penetrant"
                     android:textSize="16sp" />
 
                 <TextView
@@ -706,19 +692,19 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Penetrant_Batch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Penetrant_Batch"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Consumables_Remover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -736,14 +722,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Remover"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Remover"
                     android:textSize="16sp" />
 
                 <TextView
@@ -758,19 +743,19 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Remover_Batch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Remover_Batch"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_Consumables_Developer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -788,14 +773,13 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Developer"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Developer"
                     android:textSize="16sp" />
 
                 <TextView
@@ -810,19 +794,19 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/txt_input_ClientName2"
+                    android:id="@+id/txt_input_Consumables_Developer_Batch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:hint="Nome do Cliente"
                     android:inputType="textPersonName"
-                    android:text="@string/txt_input_ClientName"
+                    android:text="@string/txt_input_Consumables_Developer_Batch"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_QCStatus"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -946,6 +930,77 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_title_TestRestrictions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_TestRestrictions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_TestRestrictions"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_TestRestrictions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txt_input_TestRestrictions"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:lines="4"
+                        android:maxLines="5"
+                        android:singleLine="false"
+                        android:text="@string/txt_input_TestRestrictions"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_TestDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_TestDetails"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/txt_InspectorName"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_input_TestDetails"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:text="@string/txt_input_TestDetails"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 

@@ -7,22 +7,18 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <fragment
-            android:id="@+id/frag_Header"
-            android:name="com.example.sales_force.SalesForceHeader"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_weight="1" />
-
+            android:id="@+id/fragment"
+            android:name="ab.caride.ProgramHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
     </LinearLayout>
 
     <TextView
@@ -30,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="58dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:text="@string/txt_title_Welcome"
@@ -89,7 +85,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="80dp"
         android:layout_weight="1"
-        android:onClick="OnClickbuttonAcessar"
+        android:onClick="OnClickbuttonLogin"
         android:text="@string/but_MainLogin"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
