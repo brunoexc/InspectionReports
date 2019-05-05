@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuAdminActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/frag_Header"
+            android:name="com.example.sales_force.SalesForceHeader"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_title_MenuReports"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:text="@string/txt_title_MenuReports"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_MenuReports">
+
+        <Button
+            android:id="@+id/but_ReportPT"
+            android:layout_width="165dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:onClick="OnClickbuttonEmDesenvolvimento"
+            android:text="@string/but_ReportPT"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="124dp" />
+
+        <Button
+            android:id="@+id/but_ReportUT"
+            android:layout_width="165dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:onClick="OnClickbuttonCadastrarProduto"
+            android:text="@string/but_ReportUT"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="124dp" />
+
+        <Button
+            android:id="@+id/but_ReportMT"
+            android:layout_width="165dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:onClick="OnClickbuttonEmDesenvolvimento"
+            android:text="@string/but_ReportMT"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="124dp" />
+
+        <Button
+            android:id="@+id/but_ReportET"
+            android:layout_width="165dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:onClick="OnClickbuttonEmDesenvolvimento"
+            android:text="@string/but_ReportET"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+            tools:layout_editor_absoluteX="124dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
